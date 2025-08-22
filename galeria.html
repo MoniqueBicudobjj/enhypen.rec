@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria ENHYPEN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ================= HEADER ================= -->
+  <header>
+    <div class="logo">
+      <img src="https://i.ibb.co/shT1MxB/Lighistick-enha.png" alt="Lightstick ENHYPEN">
+      <h1>ENGENE STATION</h1>
+    </div>
+
+   
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+        <li><a href="integrantes.html">Integrantes</a></li>
+        <li><a href="contato.html">Contato</a></li>
+         <li><a href="sites.html">Sites</a></li>
+        <li><a href="eventos.html">Sites</a></li>
+    </ul>
+    </nav>
+  </header>
+
+  <!-- ================= CARROSSEL ================= -->
+  <section class="galeria-carrossel">
+    <h2>Galeria ENHYPEN</h2>
+
+    <div class="carrossel-wrapper">
+      <button class="carrossel-btn carrossel-anterior">&#10094;</button>
+
+      <div class="carrossel" id="carrossel">
+        <img id="img1" src="https://i.ibb.co/qMsn9zW4/ENHYPEN-OFFICIAL.jpg" alt="ENHYPEN 1">
+        <img id="img2" src="https://i.ibb.co/pjGB29J9/Enhypen-Official-Japan-Posted-on-X.jpg" alt="ENHYPEN 2">
+        <img id="img3" src="https://i.ibb.co/Hpp4fvHX/ENHYPEN.jpg" alt="ENHYPEN 3">
+        <img src="https://i.ibb.co/PZxwNFPx/Fir-heeseungcokr-on-X.jpg"  alt="ENHYPEN 4">
+      <img src="https://i.ibb.co/TqJP5rD7/iciel-baekwoniee-on-X.jpg" alt="ENHYPEN 4">
+       <img src="https://i.ibb.co/RTMTBDxX/ENHYPEN-3.jpg"   alt="ENHYPEN 4">
+      </div>
+
+      <button class="carrossel-btn carrossel-proximo">&#10095;</button>
+    </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const carrossel = document.querySelector('.carrossel');
+      const btnAnterior = document.querySelector('.carrossel-anterior');
+      const btnProximo = document.querySelector('.carrossel-proximo');
+
+      const gap = 20; // espaço entre imagens
+      const imgWidth = carrossel.querySelector('img').offsetWidth + gap;
+
+      btnProximo.addEventListener('click', function () {
+        carrossel.scrollBy({ left: imgWidth, behavior: 'smooth' });
+      });
+
+      btnAnterior.addEventListener('click', function () {
+        carrossel.scrollBy({ left: -imgWidth, behavior: 'smooth' });
+      });
+    });
+  </script>
+
+ <footer class="footer container flex flex-center">
+        <p class="text text-small text-muted">&copy; 2025 ENGENE STATION. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
